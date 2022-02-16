@@ -1,0 +1,11 @@
+{
+    "get_rate_applicability_list": {
+        "sp": "sp_integration_rate_applicability_list",
+        "require": "p_mpp_code"
+    },
+
+    "get_offline_rate_applicability": {
+        "sp": "sp_offline_rate_applicability_list",
+        "require": "p_company_code,p_plant_code,p_mcc_code,p_bmc_code,p_rls_user_code"
+    }
+}

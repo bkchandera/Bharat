@@ -1,0 +1,23 @@
+{
+    "memberinfo_list": {
+        "table": "member_master",
+        "fields": "member_master.member_code,member_master.member_name,member_master.mobile_no,member_status.member_approval_level,case when member_status.member_approval_level='0' then '-' else dept.department_name end as department_name",
+        "join": [
+            {
+                "table": "member_status",
+                "condition": "member_master.member_code=member_status.member_code"
+            },
+            {
+                "type": "left",
+                "table": "approval_stage as ms",
+                "condition": "member_status.approval_stage_master_code=ms.approval_stage_master_code and member_status.member_approval_level=ms.levels"
+            },
+            {
+                "type": "left",
+                "table": "department as dept",
+                "condition": "dept.department_code=ms.department_code"
+            }
+        ],       
+        "orderby": "member_master.member_code"
+    }
+}

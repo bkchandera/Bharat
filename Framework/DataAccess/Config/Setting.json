@@ -1,0 +1,23 @@
+{
+  "Environment": "Development",
+  //  "Environment": "QA",
+  //"Environment": "Production",
+    "Development": {
+        // "ConnectionString": "Server=182.74.63.142,14033;Database=NDS_NEW;User Id=sa;Password=everest@123;Trusted_Connection=True;Integrated Security=False"
+        //"ConnectionString": "Server=cd5.everestinstruments.in,14032;Database=HRMS;User Id=sa;Password=eipl;Trusted_Connection=True;Integrated Security=False",
+        "ConnectionString": "Server=45.114.141.196,14033;Database=NDS_Integration;User Id=sa;Password=everest$ql@2021;Trusted_Connection=True;Integrated Security=False",
+        //"redis_string": "cd5.everestinstruments.in:6379,password=dishant#1276",
+        "redis_string": "45.114.141.196:6379,password=Eipl@902",
+        "redis_db": "10",
+        "elastic_string": "http://dev.everestinstruments.com:10007/"
+    },
+    "QA": {
+        "ConnectionString": "Server=182.74.63.142,14033;Database=NDS_Integration;User Id=sa;Password=everest@123;Trusted_Connection=True;Integrated Security=False",
+        "redis_string": "182.74.63.142:6379,password=dishant#1276",
+        "redis_db": "1"
+    },
+  "Production": {
+    "ConnectionString": "Server=182.74.63.142,14033;Database=NDS_PROD;User Id=sa;Password=everest@123;Trusted_Connection=True;Integrated Security=False",
+    "redis_string": "localhost:6379"
+  }
+}

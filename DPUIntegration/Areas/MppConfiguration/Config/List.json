@@ -1,0 +1,16 @@
+{
+    "get_mpp_configuration": {
+        "sp": "sp_integration_mpp_configuration_list",
+        "require": "p_mpp_code"
+    },
+
+    "get_mpp_member_download": {
+        "sp": "sp_integration_mpp_memberinfo_list",
+        "require": "p_mpp_code"
+    }
+
+    //"get_offline_mpp_member_list": {
+    //    "sp": "sp_integration_offline_mpp_member_list",
+    //    "require": "p_mpp_code"
+    //}
+}

@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+	<PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DataAccess\Utility\Config\Custom.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="DataAccess\Utility\Config\Custom.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.78" />
+    <PackageReference Include="Dapper.Contrib" Version="2.0.78" />
+    <PackageReference Include="Dapper.SqlBuilder" Version="2.0.78" />
+    <PackageReference Include="FluentValidation" Version="8.6.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="2.1.1" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
+    <PackageReference Include="ServiceStack.Redis.Core" Version="5.8.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.1.30" />
+    <PackageReference Include="StackExchange.Redis.Extensions.Core" Version="6.1.6" />
+	  <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>System</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>System.Data</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>System.Drawing</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>System.Xml</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DataAccess\Config\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,73 @@
+{
+  "KeyPatternRule": {
+    "fields": "prefix_field,length,is_custom,table_name",
+    "Where": [
+      {
+        "PropertyName": "key_pattern_name",
+        "PropertyValue": "?"
+      },
+      {
+        "PropertyName": "company_code",
+        "PropertyValue": "?"
+      }
+    ],
+    "join": [
+      {
+        "table": "key_pattern_for",
+        "condition": "key_pattern_for.key_pattern_for_code=key_pattern_rule.key_pattern_for_code"
+      },
+      {
+        "table": "company_key_pattern",
+        "condition": "company_key_pattern.key_pattern_rule_code=company_key_pattern.key_pattern_rule_code"
+      }
+    ]
+  },
+  "KeyPatternRuleOperation": {
+    "fields": "prefix_field,operation_type,is_custom,table_name",
+    "Table": "key_pattern_rule",
+    "Where": [
+      {
+        "PropertyName": "key_pattern_name",
+        "PropertyValue": "?"
+      },
+      {
+        "PropertyName": "company_code",
+        "PropertyValue": "?"
+      }
+    ],
+    "join": [
+      {
+        "table": "key_pattern_for",
+        "condition": "key_pattern_for.key_pattern_for_code=key_pattern_rule.key_pattern_for_code"
+      },
+      {
+        "table": "company_key_pattern",
+        "condition": "company_key_pattern.key_pattern_rule_code=key_pattern_rule.key_pattern_rule_code"
+      }
+    ]
+  },
+  "IsGenerate": {
+    "fields": "self_tr_code,child_tr_code",
+    "Table": "key_pattern_rule",
+    "Where": [
+      {
+        "PropertyName": "key_pattern_name",
+        "PropertyValue": "?"
+      },
+      {
+        "PropertyName": "company_code",
+        "PropertyValue": "?"
+      }
+    ],
+    "join": [
+      {
+        "table": "key_pattern_for",
+        "condition": "key_pattern_for.key_pattern_for_code=key_pattern_rule.key_pattern_for_code"
+      },
+      {
+        "table": "company_key_pattern",
+        "condition": "company_key_pattern.key_pattern_rule_code=key_pattern_rule.key_pattern_rule_code"
+      }
+    ]
+  }
+}
