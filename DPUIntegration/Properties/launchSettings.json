@@ -16,12 +16,13 @@
       }
     },
     "DPUIntegration": {
-      "commandName": "Project",
+      "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "nativeDebugging": true,
+      "ancmHostingModel": "OutOfProcess",
+      "nativeDebugging": false,
       "applicationUrl": "http://localhost:44378"
     }
   }

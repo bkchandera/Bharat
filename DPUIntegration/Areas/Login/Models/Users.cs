@@ -43,7 +43,7 @@ namespace DPUIntegration.Areas.Login.Models
         public string email { get; set; }
         public string mobile_no { get; set; }
         public bool is_active { get; set; }
-        public string JwtToken { get; set; }
+        public string AuthToken { get; set; }
 
     }
     public class UsersValidator : AbstractValidator<Users>

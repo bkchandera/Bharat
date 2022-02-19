@@ -53,7 +53,7 @@ namespace DPUIntegration.Areas.Login.BAL
             {
                 // authentication successful so generate jwt and refresh tokens
                 var jwtToken = generateJwtToken(_user);
-                UsersModel.JwtToken = jwtToken;
+                UsersModel.AuthToken = jwtToken;
 
                 TmpUserToken _TmpUserToken = new TmpUserToken
                 {
